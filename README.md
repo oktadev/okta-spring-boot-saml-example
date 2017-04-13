@@ -7,4 +7,4 @@ To see this application in action, complete the following steps:
 3. Assign a user to the application.
 4. Start and run the application using `./mvnw spring-boot:run`.
 
-For more detailed instructions, see [this blog post](http://developer.okta.com/blog/2017/03/16/spring-boot-saml) or a the origin version from the [spring-security-saml-dsl-sample](https://github.com/spring-projects/spring-security-saml-dsl/blob/master/samples/spring-security-saml-dsl-sample/README.md).
+For more detailed instructions, see [this blog post](http://developer.okta.com/blog/2017/03/16/spring-boot-saml) or the origin version from the [spring-security-saml-dsl-sample](https://github.com/spring-projects/spring-security-saml-dsl/blob/master/samples/spring-security-saml-dsl-sample/README.md).

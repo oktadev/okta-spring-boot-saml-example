@@ -38,16 +38,16 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             .apply(saml())
                 .serviceProvider()
                     .keyStore()
-                .storeFilePath("saml/keystore.jks")
-                .password(this.password)
-                .keyname(this.keyAlias)
-                .keyPassword(this.password)
+                        .storeFilePath("saml/keystore.jks")
+                        .password(this.password)
+                        .keyname(this.keyAlias)
+                        .keyPassword(this.password)
                         .and()
                     .protocol("https")
-                .hostname(String.format("%s:%s", "localhost", this.port))
+                    .hostname(String.format("%s:%s", "localhost", this.port))
                     .basePath("/")
                     .and()
                 .identityProvider()
-                .metadataFilePath(this.metadataUrl);
+                .metadataFilePath(this.metadataUrl).and();
     }
 }
