@@ -48,6 +48,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                     .basePath("/")
                     .and()
                 .identityProvider()
-                .metadataFilePath(this.metadataUrl).and();
+                .metadataFilePath(this.metadataUrl);
     }
 }
