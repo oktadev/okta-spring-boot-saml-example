@@ -67,7 +67,7 @@ Click the **Finish** button to continue. This will bring you to the application'
 
 The final setup step you'll need is to assign people to the application. Click on the **Assignments** tab and the **Assign** > **Assign to People** button. You'll see a list of people with your account in it.
 
-<img src="static/assign-people.png" alt="Assign People" width="800"/>
+<img src="static/assign-people.png" alt="Assign People" width="600" style="margin: 0 auto"/>
 
 Click the **Assign** button, accept the default username (your email), and click the **Done** button.
 
