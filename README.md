@@ -2,7 +2,7 @@
 
 A Spring Boot example app that shows how to implement single sign-on (SSO) with Spring Security's SAML DSL and Okta.
 
-Please read [Get Started with Spring Boot, OAuth 2.0, and Okta](http://developer.okta.com/blog/2017/03/21/spring-boot-oauth) to see how this app was created.
+Please read [Get Started with Spring Boot, SAML, and Okta](https://developer.okta.com/blog/2017/03/16/spring-boot-saml) to see how this app was created.
 
 **Prerequisites:** [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
