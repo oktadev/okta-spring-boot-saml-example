@@ -77,7 +77,7 @@ Update `src/main/resources/application.properties`, to have the `metadata-url` f
 server.port = 8443
 server.ssl.enabled = true
 server.ssl.key-alias = spring
-server.ssl.key-store = src/main/resources/saml/keystore.jks
+server.ssl.key-store = classpath:saml/keystore.jks
 server.ssl.key-store-password = secret
 
 security.saml2.metadata-url = <your metadata url>
