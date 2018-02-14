@@ -34,7 +34,7 @@ The first thing you'll need to do is create a developer account at [https://deve
 
 <img src="static/okta-dev-console.png" alt="Okta Dev Console" width="800"/>
  
-Click on **< > Developer** in the top-left corner and switch to the Classic UI. If you see a screen like the following, you're good to go! The reason you need to use the Classic UI for this tutorial is because we haven't yet added SAML support to the [Developer Console](/blog/2017/09/25/all-new-developer-console).
+Click on **< > Developer Console** in the top-left corner and switch to the Classic UI. If you see a screen like the following, you're good to go! The reason you need to use the Classic UI for this tutorial is because we haven't yet added SAML support to the [Developer Console](/blog/2017/09/25/all-new-developer-console).
 
 <img src="static/okta-classic-ui.png" alt="Okta Classic UI" width="800"/>
 
@@ -77,7 +77,7 @@ Update `src/main/resources/application.properties`, to have the `metadata-url` f
 server.port = 8443
 server.ssl.enabled = true
 server.ssl.key-alias = spring
-server.ssl.key-store = src/main/resources/saml/keystore.jks
+server.ssl.key-store = classpath:saml/keystore.jks
 server.ssl.key-store-password = secret
 
 security.saml2.metadata-url = <your metadata url>
