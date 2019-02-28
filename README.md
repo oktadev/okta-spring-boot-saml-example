@@ -30,7 +30,7 @@ This will get a copy of the project installed locally. To install all of its dep
 
 ### Create a SAML App in Okta
 
-The first thing you'll need to do is create a developer account at [https://developer.okta.com](https://developer.okta.com/signup/). After activating your account, log in to it. If you just created an account, you'll see a screen similar to the one below.
+The first thing you'll need to do is create an Okta account at [okta.com/integrate/signup](https://www.okta.com/integrate/signup/). After activating your account, log in to it. If you just created an account, you'll see a screen similar to the one below.
 
 <img src="static/okta-dev-console.png" alt="Okta Dev Console" width="800"/>
  
