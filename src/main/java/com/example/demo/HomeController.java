@@ -12,7 +12,7 @@ public class HomeController {
     @RequestMapping("/")
     public String home(@AuthenticationPrincipal Saml2AuthenticatedPrincipal principal, Model model) {
         model.addAttribute("name", principal.getName());
-        model.addAttribute("emailAddress", principal.getFirstAttribute("email"));
+        model.addAttribute("emailAddress", principal.getFirstAttribute("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"));
         model.addAttribute("userAttributes", principal.getAttributes());
         return "home";
     }

@@ -50,7 +50,7 @@ public class SecurityConfiguration {
         return (responseToken) -> {
             Saml2Authentication authentication = delegate.convert(responseToken);
             Saml2AuthenticatedPrincipal principal = (Saml2AuthenticatedPrincipal) authentication.getPrincipal();
-            List<String> groups = principal.getAttribute("groups");
+            List<String> groups = principal.getAttribute("http://schemas.auth0.com/roles");
             Set<GrantedAuthority> authorities = new HashSet<>();
             if (groups != null) {
                 groups.stream().map(SimpleGrantedAuthority::new).forEach(authorities::add);
