@@ -27,7 +27,7 @@ cd okta-spring-boot-saml-example
 This will get a copy of the project installed locally. To install all of its dependencies and start the app, run:
  
 ```bash
-./mvnw spring-boot:run
+./gradlew bootRun
 ```
 
 ### Create a SAML App in Okta
