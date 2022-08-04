@@ -24,12 +24,6 @@ git clone https://github.com/oktadeveloper/okta-spring-boot-saml-example.git
 cd okta-spring-boot-saml-example
 ```
 
-This will get a copy of the project installed locally. To install all of its dependencies and start the app, run:
- 
-```bash
-./gradlew bootRun
-```
-
 ### Create a SAML App in Okta
 
 To begin, you'll need an Okta developer account. You can create one at [developer.okta.com/signup](https://developer.okta.com/signup) or install the [Okta CLI](https://cli.okta.com) and run `okta register`.
