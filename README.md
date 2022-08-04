@@ -83,5 +83,5 @@ Please post any questions as comments on the [blog post][blog], or visit our [Ok
 
 Apache 2.0, see [LICENSE](LICENSE).
 
-[blog]: http://developer.okta.com/blog/2017/03/16/spring-boot-saml
+[blog]: http://developer.okta.com/blog/2022/08/05/spring-boot-saml
 
