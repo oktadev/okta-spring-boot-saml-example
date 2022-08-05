@@ -12,4 +12,4 @@ spring:
               binding: POST
               response-url: "{baseUrl}/logout/saml2/slo"
             assertingparty:
-              metadata-uri: https://dev-17700857.okta.com/app/exk60s7w0yevPUK325d7/sso/saml/metadata
+              metadata-uri: https://dev-17700857.okta.com/app/exk61z7gjfJfUWDfy5d7/sso/saml/metadata
