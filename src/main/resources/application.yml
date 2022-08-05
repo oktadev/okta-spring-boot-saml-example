@@ -18,4 +18,4 @@ spring:
               credentials: *signing-credentials
             singlelogout: *logout-settings
             assertingparty:
-              metadata-uri: https://dev-17700857.okta.com/app/exk61utspt4rSUV9J5d7/sso/saml/metadata
+              metadata-uri: https://dev-17700857.okta.com/app/exk61z7gjfJfUWDfy5d7/sso/saml/metadata
