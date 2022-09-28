@@ -49,6 +49,8 @@ Okta will create your app, and you will be redirected to its **Sign On** tab. Sc
 https://dev-13337.okta.com/app/<random-characters>/sso/saml/metadata
 ```
 
+Replace the `metadata-uri` in `src/main/resources/application.yml` with this URL.
+
 Go to your app's **Assignment** tab and assign access to the **Everyone** group.
 
 ### Run the App and Login with Okta
