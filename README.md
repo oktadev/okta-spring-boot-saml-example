@@ -20,7 +20,7 @@ Please read [Get Started with Spring Boot, SAML, and Okta][blog] to see how this
 To install this example application, run the following commands:
 
 ```bash
-git clone https://github.com/oktadeveloper/okta-spring-boot-saml-example.git
+git clone https://github.com/oktadev/okta-spring-boot-saml-example.git
 cd okta-spring-boot-saml-example
 ```
 
