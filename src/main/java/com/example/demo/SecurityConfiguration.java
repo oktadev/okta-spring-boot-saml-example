@@ -28,16 +28,11 @@ public class SecurityConfiguration {
         OpenSaml4AuthenticationProvider authenticationProvider = new OpenSaml4AuthenticationProvider();
         authenticationProvider.setResponseAuthenticationConverter(groupsConverter());
 
-        // @formatter:off
-        http
-            .authorizeHttpRequests(authorize -> authorize
-                .anyRequest().authenticated()
-            )
+        http.authorizeHttpRequests(authorize -> authorize
+                .anyRequest().authenticated())
             .saml2Login(saml2 -> saml2
-                .authenticationManager(new ProviderManager(authenticationProvider))
-            )
+                .authenticationManager(new ProviderManager(authenticationProvider)))
             .saml2Logout(withDefaults());
-        // @formatter:on
 
         return http.build();
     }
