@@ -51,7 +51,36 @@ https://dev-13337.okta.com/app/<random-characters>/sso/saml/metadata
 
 Go to your app's **Assignment** tab and assign access to the **Everyone** group.
 
-### Run the App and Login with Okta
+### Create a SAML App in Auth0
+
+[Sign up for an Auth0 account](https://auth0.com/signup) or [log in](https://auth0.com/api/auth/login?redirectTo=dashboard) with your existing one. Navigate to **Applications** > **Create Application** > **Regular Web Applications** > **Create**.
+
+Select the **Settings** tab and change the name to `Spring Boot SAML`. Add `http://localhost:8080/login/saml2/sso/auth0` as an **Allowed Callback URL**.
+
+Scroll to the bottom, expand **Advanced Settings**, and go to **Endpoints**. Copy the value of the **SAML Metadata URL**. Select **Save Changes**.
+
+Clone the `auth0` branch, which contains changes to look for Auth0 attributes instead of Okta attributes.
+
+```shell
+git clone -b auth0 https://github.com/oktadev/okta-spring-boot-saml-example.git
+cd okta-spring-boot-saml-example
+```
+
+Copy your **SAML Metadata URL** into `src/main/resources/application.yml`:
+
+```yaml
+spring:
+  security:
+    saml2:
+      relyingparty:
+        registration:
+          auth0:
+            assertingparty:
+              metadata-uri: <your-auth0-metadata-uri>
+            ...
+```
+
+### Run the App and Login
 
 Run your Spring Boot app from your IDE or using the command line:
 
@@ -67,11 +96,11 @@ If you want to make the logout button work and display a user's attributes, plea
 
 ## Links
 
-This example uses Spring Boot and [Spring Security SAML](https://docs.spring.io/spring-security/reference/servlet/saml2/login/index.html) to integrate with Okta. 
+This example uses Spring Boot and [Spring Security SAML](https://docs.spring.io/spring-security/reference/servlet/saml2/login/index.html) to integrate with Okta and Auth0. 
 
 ## Help
 
-Please post any questions as comments on the [blog post][blog], or visit our [Okta Developer Forums](https://devforum.okta.com/).
+Please post any questions as comments on the [blog post][blog], visit the [Okta Developer Forums](https://devforum.okta.com/), or talk to us on the [Auth0 Community Forums](https://community.auth0.com/).
 
 ## License
 
