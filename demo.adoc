@@ -70,7 +70,7 @@ https start.spring.io/starter.zip bootVersion==3.0.6 \
   baseDir==spring-boot-saml | tar -xzvf -
 ----
 
-. Add `src/main/java/com/example/demo/HomeController.java` to populate the authenticated user's information. [`saml-home`]
+. Add a `HomeController.java` to populate the authenticated user's information. [`saml-home`]
 +
 .`HomeController.java`
 [%collapsible]
@@ -135,7 +135,7 @@ public class HomeController {
 ----
 ====
 
-. Create a `src/main/resources/application.yml` file to contain the metadata URI you copied in link:#add-a-saml-application-on-okta[Add a SAML application on Okta]. This value should end with `/sso/saml/metadata`. [`saml-config`]
+. Rename `application.properties` to `application.yml` and add SAML configuration for Spring Security. [`saml-config`]
 +
 .`application.yml`
 [%collapsible]
@@ -153,7 +153,7 @@ spring:
 ----
 ====
 
-. Then, change `build.gradle` to add Spring Security's SAML dependency:
+. Update `build.gradle` to add Spring Security's SAML dependency:
 +
 [source,groovy]
 ----
