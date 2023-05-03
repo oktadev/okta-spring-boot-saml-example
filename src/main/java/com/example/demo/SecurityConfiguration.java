@@ -28,17 +28,11 @@ public class SecurityConfiguration {
         OpenSaml4AuthenticationProvider authenticationProvider = new OpenSaml4AuthenticationProvider();
         authenticationProvider.setResponseAuthenticationConverter(groupsConverter());
 
-        // @formatter:off
-        http
-            .authorizeHttpRequests(authorize -> authorize
-                .mvcMatchers("/favicon.ico").permitAll()
-                .anyRequest().authenticated()
-            )
+        http.authorizeHttpRequests(authorize -> authorize
+                .anyRequest().authenticated())
             .saml2Login(saml2 -> saml2
-                .authenticationManager(new ProviderManager(authenticationProvider))
-            )
+                .authenticationManager(new ProviderManager(authenticationProvider)))
             .saml2Logout(withDefaults());
-        // @formatter:on
 
         return http.build();
     }
@@ -51,7 +45,11 @@ public class SecurityConfiguration {
         return (responseToken) -> {
             Saml2Authentication authentication = delegate.convert(responseToken);
             Saml2AuthenticatedPrincipal principal = (Saml2AuthenticatedPrincipal) authentication.getPrincipal();
-            List<String> groups = principal.getAttribute("http://schemas.auth0.com/roles");
+            List<String> groups = principal.getAttribute("groups");
+            // if groups is not preset, try Auth0 attribute name
+            if (groups == null) {
+                groups = principal.getAttribute("http://schemas.auth0.com/roles");
+            }
             Set<GrantedAuthority> authorities = new HashSet<>();
             if (groups != null) {
                 groups.stream().map(SimpleGrantedAuthority::new).forEach(authorities::add);
