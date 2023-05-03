@@ -96,7 +96,7 @@ If you want to make the logout button work and display a user's attributes, plea
 
 ## Links
 
-This example uses Spring Boot and [Spring Security SAML](https://docs.spring.io/spring-security/reference/servlet/saml2/login/index.html) to integrate with Okta. 
+This example uses Spring Boot and [Spring Security SAML](https://docs.spring.io/spring-security/reference/servlet/saml2/login/index.html) to integrate with Okta and Auth0. 
 
 ## Help
 
